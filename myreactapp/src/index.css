@@ -14,10 +14,12 @@
   max-width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
+  border: 2px solid; 
 }
 .navbar h1 {
   color: #0b0104;
   font-size: 1.5rem;
+  
 }
 .navbar .links {
   margin-left: auto;
@@ -34,4 +36,29 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+  border: 2px solid; 
+}
+
+.project {
+  display: grid;
+  border: 2px solid; 
+  grid-template: repeat (1fr, 2) / repeat (1fr, 2);
+  column-gap: 5px;
+  background-color: #f1356d;
+  justify-items: start;
+  align-items: center;
+  max-width: 1600px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+img {
+  grid-area: 1 / 1 / span 2 / span 1;
+  max-width: 70%;
+  min-width: 150px;
+}
+.item {
+  grid-area: 1 / 2 / span 2 / span 1;
+  justify-self: start;
+  max-width: 70%;
 }
