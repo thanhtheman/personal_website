@@ -2,17 +2,21 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import './About.scss';
+import { urlFor, client } from '../../client';
 
-const abouts =[
-  {title:'Blockchain', description: 'I am good at', imgUrl: images.about01},
-  {title:'Full Stack', description: 'I am good at', imgUrl: images.about02},
-  {title:'Smart Contract Design & Security', description: 'I am good at', imgUrl: images.about03},
-  {title:'Decentralized Finance', description: 'I am good at', imgUrl: images.about04}
-];
 const About = () => {
+  
+  const [abouts, setAbouts] = useState([]);
+  
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+    client.fetch(query)
+      .then((data) => setAbouts(data))
+  }, []);
+
   return (
     <>
-      <h2 className='head-text'>Things that I am <span>Good</span> at <br /> <span>Good Business</span> </h2>
+      <h2 className='head-text' style={{ marginTop: 20 }}>Things that I am <span>Good</span> at:</h2>
       
       <div className='app__profiles'>
         {abouts.map((about, index) => (
@@ -23,7 +27,7 @@ const About = () => {
             className='app__profile-item'
             key={about.title +index}
           >
-            <img src={about.imgUrl} alt={about.title}/>
+            <img src={urlFor(about.imgUrl)} alt={about.title}/>
             <h2 className='bold-text' style={{marginTop: 20}}>{about.title}</h2>
             <p className='p=text'style={{marginTop: 10}}>{about.description}</p>
           </motion.div>
