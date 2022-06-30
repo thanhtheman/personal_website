@@ -1,6 +1,7 @@
 import React from 'react';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import './Footer.scss';
 const Footer = () => {
   return (
@@ -15,6 +16,16 @@ const Footer = () => {
         <div className='app__footer-card'>
           <img src={images.email} alt="email" />
           <a href="email" className='p-text'> thanhb.quach@gmail.com</a>
+        </div>
+
+        <div className='app__footer-card'>
+          <img src={images.linkedin} alt="linkedin" />
+          <a href="https://www.linkedin.com/in/thanh-quach1/" className='p-text'> Thanh Quach</a>
+        </div>
+
+        <div className='app__footer-card'>
+          <img src={images.github} alt="github" />
+          <a href="https://github.com/thanhtheman" className='p-text'> My github repo</a>
         </div>
 
         <div className="copyright">

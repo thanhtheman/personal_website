@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap } from '../../wrapper';
+import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 import './Header.scss';
 
@@ -37,6 +38,10 @@ const Header = () => {
           <div className='tag-cmp app__flex'>
             <p className='p-text'>Software Developer (Web 2 to 3)</p>
             <p className='p-text'>Blockchain Technology</p>
+            <div className='social-item'>
+             <a href="https://www.linkedin.com/in/thanh-quach1/"><BsLinkedin /></a>
+             <a href="https://github.com/thanhtheman"><BsGithub /></a>
+            </div> 
           </div>
 
         </div>

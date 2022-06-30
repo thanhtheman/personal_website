@@ -79,6 +79,16 @@
         text-transform: uppercase;
         text-align: right;
       }
+      .social-item {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0.25rem;
+        flex-direction: row;
+
+        a {
+          margin-left: 1rem;
+        }
+      }
     }
   
     span {
