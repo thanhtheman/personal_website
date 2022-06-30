@@ -38,6 +38,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 import linkedin from '../assets/linkedin.png';
 import github from '../assets/github.png';
+import metaverseprofile from '../assets/metaverseprofile.png';
 
 export default {
   email,
@@ -76,5 +77,6 @@ export default {
   ethereum,
   hardhat,
   linkedin,
-  github
+  github,
+  metaverseprofile
 };
